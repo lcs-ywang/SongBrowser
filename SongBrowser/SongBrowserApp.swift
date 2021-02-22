@@ -11,6 +11,13 @@ import SwiftUI
 struct SongBrowserApp: App {
     var body: some Scene {
         WindowGroup {
+            
+            NavigationView{
+                
+                ContentView()
+                
+            }
+            
             ContentView()
         }
     }

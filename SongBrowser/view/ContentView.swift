@@ -52,7 +52,11 @@ struct ContentView: View {
                 //to uniquely identify each song
                 List(songs, id:\.trackId) { currentSong in
                    
+                    NavigationLink(destination: SongDetailView(song: currentSong)){
+                    
+                    
                     SimpleListItemView(title: currentSong.trackName, caption: currentSong.artistName)
+                    }
                     
                 }
         
@@ -61,6 +65,7 @@ struct ContentView: View {
             }
             
         }
+        .navigationTitle("Song Browser")
     }
     
     
