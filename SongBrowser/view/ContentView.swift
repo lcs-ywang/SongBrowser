@@ -51,13 +51,8 @@ struct ContentView: View {
                 //keypath of \. tracked tells the list view what property to use
                 //to uniquely identify each song
                 List(songs, id:\.trackId) { currentSong in
-                    VStack{
-                        Text(currentSong.trackName)
-                        
-                        Text(currentSong.artistName)
-                            .font(.caption)
-                        
-                    }
+                   
+                    SimpleListItemView(title: currentSong.trackName, caption: currentSong.artistName)
                     
                 }
         
@@ -138,7 +133,7 @@ struct ContentView: View {
                 DispatchQueue.main.async {
 
                     // Assign the result to the "someText" stored property
-                    songs = decodedsongData.result
+                    songs = decodedsongData.results
 
                 }
 
